@@ -1,0 +1,39 @@
+from typing import List # this is used to add type hints for List type
+
+def get_sum(nums: List[int]) -> int:
+ 
+    length = len(nums)
+    total = 0;
+    for i in range(length):
+        total += nums[i]
+    
+    return total;
+#   return sum(nums)
+def get_min(nums: List[int]) -> int:
+    minimum = nums[0]
+
+    length = len(nums)
+    for i in range(length):
+        if nums[i] < minimum:
+            minimum = nums[i]
+    return minimum
+
+    
+#   return min(nums)
+def get_max(nums: List[int]) -> int:
+    max = nums[0]
+    for element in nums:
+        if element > max:
+            max = element
+    return max
+
+# #   return max(nums)
+# do not modify below this line
+print(get_sum([1, 2, 3, 4, 5]))
+print(get_sum([5, 4, 5, 6]))
+
+print(get_min([7, 3, 4, 5]))
+print(get_min([5, 4, 5, 6]))
+
+print(get_max([7, 3, 4, 5]))
+print(get_max([5, 4, 5, 6]))
